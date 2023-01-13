@@ -268,7 +268,7 @@ def create_matrix():
             for j in range(n_c):
                 num=float(input("Enter a number"))
                 matrix[i][j]=num
-                return matrix
+        return matrix
     except ValueError:
         print("Please give the numbers in the correct form.")
         create_matrix()
@@ -299,7 +299,7 @@ def matrix_solver():
     if command=='1' or command.lower()=='Matrix and vector operations':
         command=int(input("Here are the possible operations:\n 1-Single Matrix operations\n 2-Matrix-Matrix operations\n 3-Matrix-Vector operations\n 4-Vector-Vector operations\n"))
         if command==1:
-            Print("The matrix:\n")
+            print("The matrix:\n")
             matrix=create_matrix()
             command=input("Here are the possible operations:\n 1-Check if matrix is invertible \n 2-Get Determinant.\n 3-Get Inverse\n 4-Get Adjoint Matrix 5-Get Cofactor Matrix\n 6-Get Transpose Matrix 7- Multiply by constant.")
             if command=='1':
@@ -309,11 +309,11 @@ def matrix_solver():
             elif command=='3':
                 print(inverse(matrix))
             elif command=='4':
-                print(Adjoint(matrix))
+                print(adjoint(matrix))
             elif command=='5':
                 print(get_cofactor(matrix))
             elif command=='6':
-                print(Transpose(matrix))
+                print(transpose(matrix))
             elif command=='7':
                 C=float(input('Enter the constant.'))
                 print(multiply_by_constant(matrix,C))
@@ -334,9 +334,9 @@ def matrix_solver():
                 print(matrix_mult(a,b))
                 
         elif command==3:
-            Print("The matrix:\n")
+            print("The matrix:\n")
             a=create_matrix()
-            Print("The vector:\n")
+            print("The vector:\n")
             x=create_vector()
             command=input("Here are the possible operations:\n 1-Get the Image of the vector by the matrix.\n 2-Get the coordinates of the vector by the matrix.\n ")
             if command=='1':
@@ -427,13 +427,13 @@ def largest_value(lis):
     return value
 
                 
-                
 
 matrix_solver()
 
     
 
 print('Thanks for using my Matrice solver! Have a nice day.(RUN THE SYSTEM AGAIN TO USE MY MATRICE SOLVER.)')
+
 
             
 
